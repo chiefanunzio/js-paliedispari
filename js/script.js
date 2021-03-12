@@ -1,7 +1,9 @@
-var parola = prompt('inserisci una parola');
-function parolaPalind(parola){
-  return parola.split(parola);
+
+function parolaPalind(val){
+
+  return val.split("").reverse().join("");
 
 }
-
-console.log(parola);
+var parola = prompt('dimmi una parola');
+var res = parolaPalind(parola);
+console.log(res);
