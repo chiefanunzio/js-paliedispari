@@ -14,13 +14,8 @@
 // }
 // // valuto se sono uguali
 
-
-function rndNumber(min, max) {
-  var minRnd = min;
-  var maxRnd = max - minRnd + 1;
-  var rnd = Math.floor(Math.random() * maxRnd) + minRnd;
-
-  return rnd;
+function getrandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 // function pariDispari(value){
 //   if(value % 2 == 1){
@@ -33,7 +28,7 @@ function rndNumber(min, max) {
 
 var req = prompt('pari o dispari ?');//requisiti per la vittoria
 var numUtente = parseInt(prompt('dimmi un numero da 1 a 5'));//numero del player
-var numIa = rndNumber(1, 5);//numero generato dal pc
+var numIa = getrandom(1, 5);//numero generato dal pc
 var res = numUtente + numIa;//risultato della somma
 
 
